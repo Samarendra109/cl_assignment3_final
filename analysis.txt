@@ -1,0 +1,41 @@
+% Student name: NAME
+% Student number: NUMBER
+% UTORid: ID
+
+% This code is provided solely for the personal and private use of students
+% taking the CSC485H/2501H course at the University of Toronto. Copying for
+% purposes other than this use is expressly prohibited. All forms of
+% distribution of this code, including but not limited to public repositories on
+% GitHub, GitLab, Bitbucket, or any other online platform, whether as given or
+% with any changes, are expressly prohibited.
+
+% Authors: Jingcheng Niu and Gerald Penn
+
+% All of the files in this directory and all subdirectories are:
+% Copyright c 2022 University of Toronto
+
+2(a)
+
+Sentence 28: A hacker speaks every language.
+
+exists(x).(hacker(x) ^ forall(y).(language(y) => speak(x,y)))
+    i.e. there exists an x s.t. x is a hacker and for all y if y is a language then x speaks y.
+forall(y).(language(y) => exists(x).(hacker(x) ^ speak(x,y)))
+    i.e. for all y if y is a language then there exists an x s.t. x is a hacker and x speaks y. 
+
+Sentence 29: mei ge    heike  dou huishuo yi zhong    yuyan.
+             all ge-CL hacker DOU speak   a  zhong-CL language.
+
+forall(x).(hacker(x) => exists(y).(language(y) ^ speak(x, y)))
+    i.e. for all if x is a hacker then there exists y s.t. y is a language and x speaks y.
+exists(y).(language(y) ^ forall(x).(hacker(x) => speak(x, y)))
+    i.e. the exists y s.t. y is a language and for all x if x is a hacker then x speaks y.
+
+
+Sentence 30: yi ge    heike  huishuo mei zhong    yuyan.
+             a  ge-CL hacker speak   all zhing-CL language.
+
+exists(x).(hacker(x) ^ forall(y).(language(y) => speak(x,y)))
+    i.e. there exists an x s.t. x is a hacker and for all y if y is a language then x speaks y.
+
+2(e)
