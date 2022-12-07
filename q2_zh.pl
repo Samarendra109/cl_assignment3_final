@@ -255,6 +255,8 @@ sem1(sem:S, S) if true.
 % You should write more
 prect_test :- prec([yi,ge,heike,huishuo,mei,zhong,yuyan]).
 translate_test :- translate([yi,ge,heike,huishuo,mei,zhong,yuyan]).
+gen1_test :- gen((s, sem:speak, logic: @forall(X, @apply(language, [X]), @exists(Y, @apply(hacker, [Y]), @apply(speak, [Y|[X]]))))).
+gen2_test :- gen((s, sem:speak, logic: @forall(X, @apply(hacker, [X]), @exists(Y, @apply(language, [Y]), @apply(speak, [X|[Y]]))))).
 
 p0 :- (prec([mei, ge, heike, dou, huishuo, mei, ge, heike]); write('failed')), (write('\n'),nl). 
 p1 :- (prec([mei, ge, heike, mei, ge, heike, dou, huishuo]); write('failed')), (write('\n'),nl). 
