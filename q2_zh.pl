@@ -197,7 +197,7 @@ resolve_gap_and_normalize(
     beta_normalize(@apply(NP_Sub_logic, [VP_Obj_logic]), Norm_logic),
     is_empty(NP_Obj_qstore).
 
-% The below two can work instead, but for simplicity of testing I am omitting these.
+% The below can also work, but for simplicity of testing I am omitting these.
 % resolve_gap_and_normalize(
 %         NP,
 %         NP_Sub_logic, 
