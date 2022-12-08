@@ -190,26 +190,13 @@ resolve_gap_and_normalize(
         NP_Sub_logic, 
         (vp, logic: VP_logic, gap:Gap), 
         (np, logic:NP_Obj_logic, qstore: NP_Obj_qstore, NP_obj), 
-        Norm_logic, NP_Obj_qstore
+        S_logic, S_qstore
     ) if
     is_gap(Gap),
     beta_normalize(@apply(VP_logic, [NP_Obj_logic]), VP_Obj_logic),
     beta_normalize(@apply(NP_Sub_logic, [VP_Obj_logic]), Norm_logic),
-    is_empty(NP_Obj_qstore).
-
-% The below can also work, but for simplicity of testing I am omitting these.
-% resolve_gap_and_normalize(
-%         NP,
-%         NP_Sub_logic, 
-%         (vp, logic: VP_logic, gap:Gap), 
-%         (np, logic:NP_Obj_logic, qstore: NP_Obj_qstore, NP_obj), 
-%         S_logic, S_qstore
-%     ) if
-%     is_gap(Gap),
-%     beta_normalize(@apply(VP_logic, [NP_Obj_logic]), VP_Obj_logic),
-%     beta_normalize(@apply(NP_Sub_logic, [VP_Obj_logic]), Norm_logic),
-%     is_not_empty(NP_Obj_qstore),
-%     retrieve(NP_Obj_qstore, Norm_logic, S_qstore, S_logic).
+    is_not_empty(NP_Obj_qstore),
+    retrieve(NP_Obj_qstore, Norm_logic, S_qstore, S_logic).
 
 % Helper goals
 append([],Xs,Xs) if true.
